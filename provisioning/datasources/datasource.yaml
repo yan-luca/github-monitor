@@ -1,0 +1,10 @@
+apiVersion: 1
+
+datasources:
+  - name: GitHub
+    type: grafana-github-datasource
+    access: proxy
+    isDefault: true
+    secureJsonData:
+      accessToken: "token"
+    editable: false
