@@ -1513,29 +1513,29 @@
       },
       {
         "current": {
-          "text": "YaLTeR",
-          "value": "YaLTeR"
+          "text": "docker",
+          "value": "docker"
         },
         "label": "Organization",
         "name": "organization",
         "options": [
           {
             "selected": true,
-            "text": "grafana",
-            "value": "grafana"
-          },
-          {
-            "selected": true,
-            "text": "YaLTeR",
-            "value": "YaLTeR"
+            "text": "docker",
+            "value": "docker"
           },
           {
             "selected": false,
             "text": "hyperlight-dev",
             "value": "hyperlight-dev"
+          },
+          {
+            "selected": false,
+            "text": "YaLTeR",
+            "value": "YaLTeR"
           }
         ],
-        "query": "YaLTeR,hyperlight-dev,docker",
+        "query": "docker,hyperlight-dev,YaLTeR",
         "type": "custom"
       },
       {
@@ -1556,7 +1556,7 @@
           "repository": ""
         },
         "refresh": 1,
-        "regex": "",
+        "regex": "^(niri|wl-clipboard-rs|hyperlight|buildx|model-cli)$",
         "type": "query"
       },
       {
