@@ -10,6 +10,7 @@ services:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
       - GF_SECURITY_ALLOW_EMBEDDING=true
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
     volumes:
       - ./grafana-data:/var/lib/grafana:Z
       - ./provisioning:/etc/grafana/provisioning:z
