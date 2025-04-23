@@ -7,7 +7,7 @@ This security policy outlines our procedures for handling security vulnerabiliti
 
 If you discover a security vulnerability, please **do not** create a public GitHub issue. Instead, follow these steps:
 
-1. **Private Disclosure:** Send an email (see Contact) with the subject: SECURITY: `REPO-NAME`. Please replace `REPO-NAME` with the repository name and include a detailed description of the vulnerability on email body, including:
+1. **Private Disclosure:** Send an email (see Contact) with the subject: SECURITY: github-monitor. Please include a detailed description of the vulnerability on email body, including:
 
     * The affected component(s)
 
@@ -33,6 +33,6 @@ Please do not publicly disclose any vulnerability details before we have had a c
 
 ### Contact
 
-Please email security reports to: \[insert security contact email address here\]
+Please email security reports to: thomasqsa@gmail.com
 
 Thank you for helping to keep this project secure.
