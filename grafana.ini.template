@@ -2,9 +2,9 @@
 provisioning = /etc/grafana/provisioning
 
 [server]
-root_url = https://<your-domain>.com
-domain = <your-domain>.com
-enforce_domain = true
+root_url = ${GF_SERVER_ROOT_URL}
+domain = ${GF_SERVER_DOMAIN}
+enforce_domain = ${GF_SERVER_ENFORCE_DOMAIN}
 
 [security]
 allow_embedding = true
@@ -33,4 +33,3 @@ check_for_updates = false
 [feature_toggles]
 publicDashboards = false
 accessTokenExpirationCheck = false
-
