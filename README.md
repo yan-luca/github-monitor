@@ -50,13 +50,17 @@ A ready-to-use GitHub monitoring dashboard for Grafana that provides comprehensi
    ```bash
    ./set-perms.sh
    ```
-
-5. **Start Grafana**
+5. **generate grafana.ini**
+   ```bash
+   ./generate-config.sh
+   ```
+   
+6. **Start Grafana**
    ```bash
    docker-compose up -d
    ```
 
-6. **Access the dashboard**
+7. **Access the dashboard**
    
    Open http://localhost:3000 in your browser (or your custom domain if configured in .env)
 
