@@ -12,6 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Copy env file
+        run: |
+          if [ ! -f .env.template ]; then
+            echo ".env.template not found!"
+            exit 1
+          fi
+          cp .env.template .env
 
       - name: Validate Docker Compose config
         run: docker compose config -q
@@ -19,13 +27,8 @@ jobs:
       - name: Build Docker images
         run: docker compose build
 
-      - name: Copy env file and start containers
+      - name: Start containers
         run: |
-          if [ ! -f .env.template ]; then
-            echo ".env.template not found!"
-            exit 1
-          fi
-          cp .env.template .env
           docker compose up -d
           sleep 30
 
