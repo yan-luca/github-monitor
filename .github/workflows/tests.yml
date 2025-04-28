@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate Docker Compose config
+        run: docker compose config -q
+
+      - name: Build Docker images
+        run: docker compose build
+
+      - name: Copy env file and start containers
+        run: |
+          cp .env.example .env
+          docker compose up -d
+          sleep 30
+
+      - name: Check container health
+        run: |
+          docker compose ps
+          docker compose logs grafana
+          curl -f http://localhost:3000/api/health || exit 1
+
+      - name: Run integration tests
+        run: |
+          chmod +x test/*.sh
+          bash test/integration-test.sh
+          bash test/validate-config.sh
+
+      - name: Shutdown containers
+        if: always()
+        run: docker compose down
