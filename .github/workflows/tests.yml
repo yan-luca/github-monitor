@@ -21,7 +21,10 @@ jobs:
 
       - name: Copy env file and start containers
         run: |
-          touch .env
+          if [ ! -f .env.template ]; then
+            echo ".env.template not found!"
+            exit 1
+          fi
           cp .env.template .env
           docker compose up -d
           sleep 30
