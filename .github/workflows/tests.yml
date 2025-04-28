@@ -21,6 +21,7 @@ jobs:
 
       - name: Copy env file and start containers
         run: |
+          touch .env
           cp .env.template .env
           docker compose up -d
           sleep 30
