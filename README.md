@@ -1,7 +1,7 @@
 # GitHub Dashboard for Grafana
 
 A ready-to-use GitHub monitoring dashboard for Grafana that provides comprehensive insights into GitHub repositories, issues, pull requests, and more. This project makes it easy to set up and customize dashboards for specific GitHub organizations and repositories.
-Example instance running [here](https://grafana.squaredfield.com).
+Example instance running [here](https://grafana.tantalius.com).
 
 ## Features
 
