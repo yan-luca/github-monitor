@@ -6,9 +6,12 @@
 
 - Docs
   - [Backlog](docs/Backlog.md)
+  - [Arquitetura](docs/arquitetura.md)
+  - [Changelog](docs/changelog.md)
   - [CodigoConduta](docs/codigoConduta.md)
   - [Commits](docs/commits.md)
   - [Contribuir](docs/contribuir.md)
+  - [Diario De Bordo](docs/diario-de-bordo.md)
   - [FuncionamentoDoProjeto](docs/funcionamentoDoProjeto.md)
   - [Home](docs/home.md)
   - [License](docs/license.md)
