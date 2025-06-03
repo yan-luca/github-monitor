@@ -3,7 +3,7 @@
 ```mermaid
 graph TD
     %% Configuração Inicial
-    A[Usuário] -->|1. Clone do Repositório| B[github-monitor]
+    A[Usuário] -->|Clone do Repositório| B[github-monitor]
     B --> C[Configuração .env]
     C -->|GITHUB_TOKEN<br/>REPOS<br/>GF_SERVER_*| D[Variáveis de Ambiente]
     
@@ -60,7 +60,7 @@ graph TD
     O4 --> M
     
     %% Acesso Final
-    M -->|http://localhost:3000<br/>ou Domínio Customizado| P[Dashboard Interativo]
+    M -->P[Dashboard Interativo]
     P --> P1[Visualizações<br/>- Gráficos<br/>- Tabelas<br/>- Métricas]
     P --> P2[Filtros<br/>- Por Repositório<br/>- Por Período<br/>- Por Tipo]
     
@@ -76,11 +76,11 @@ graph TD
     R -->|docker-compose logs grafana| S[Troubleshooting]
     
     %% Estilos
-    classDef configClass fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef dataClass fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef systemClass fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    classDef uiClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    classDef securityClass fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    classDef configClass fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000,font-weight:bold
+    classDef dataClass fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#000,font-weight:bold
+    classDef systemClass fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px,color:#000,font-weight:bold
+    classDef uiClass fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000,font-weight:bold
+    classDef securityClass fill:#ffebee,stroke:#b71c1c,stroke-width:2px,color:#000,font-weight:bold
     
     class A,C,D,E,E1,E2,E3 configClass
     class H,I,J,J1,J2,J3,J4,J5 dataClass
